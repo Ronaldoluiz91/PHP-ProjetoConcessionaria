@@ -63,11 +63,7 @@ if ($exc->num_rows > 0) {
 echo " </table>";
 ?>
 
-
 <hr>
-
-
-
 
 <form method="post" action="grava-versao.php">
         <input type="hidden" name="idModelo" value="<?= $idModelo ?>">
