@@ -18,15 +18,19 @@ if ($exc->num_rows > 0) {
         $idMarca = $row['idMarca'];
 }
 
+// echo $idMarca;
+
+// $modelo = $_GET['modelo'];
+
 ?>
 
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos Modelos</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -36,8 +40,6 @@ if ($exc->num_rows > 0) {
             <td>ID</td>
             <td>MODELO</td>
         </tr>
-
-
         <?php
 
         $sql = "SELECT * FROM tbl_modelo WHERE idMarca='$idMarca'";
@@ -53,13 +55,17 @@ if ($exc->num_rows > 0) {
                 echo "<td><a href ='todas-versoes.php?modelo=$modelo'>" . $modelo . "</a></td>";
                 echo "</tr>";
             }
-            echo " </table>";
+           
         } else {
 
             echo "Modelos de veiculos não cadastrado para essa marca";
         }
         ?>
     </table>
+
+
+
+    
 
     <form method="post" action="grava-modelo.php">
         <input type="hidden" name="idMarca" value="<?= $idMarca ?>">
@@ -78,12 +84,6 @@ if ($exc->num_rows > 0) {
     $conn->close();
     ?>
 
-
-
-
-
-
 </body>
-
 
 </html>

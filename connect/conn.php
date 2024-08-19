@@ -8,7 +8,7 @@ $serverDB = "127.0.0.1:3306";
 
 $userDB = "root";
 $passwordDB = "";
-$nameDB = "dbcarro";
+$nameDB = "db_carro_tii06";
 
 //Criando a conexão com MySQL via objeto mysql
 $conn = @new mysqli(
